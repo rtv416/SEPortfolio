@@ -79,4 +79,38 @@ function updateProjects() {
     });
 }
 
-window.addEventListener('resize', updateProjects); 
+window.addEventListener('resize', updateProjects);
+
+// Vanta.js fog effect for the introduction and contact sections
+VANTA.FOG({
+  el: "#introduction",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  highlightColor: 0x5c5c3d,
+  midtoneColor: 0x77815C,
+  lowlightColor: 0x3E2F2F,
+  baseColor: 0x1a1a1a,
+  blurFactor: 0.60,
+  speed: 1.50,
+  zoom: 1.20
+});
+
+// Apply the same effect to the contact section
+VANTA.FOG({
+  el: "#contact",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  highlightColor: 0x5c5c3d,
+  midtoneColor: 0x77815C,
+  lowlightColor: 0x3E2F2F,
+  baseColor: 0x1a1a1a,
+  blurFactor: 0.60,
+  speed: 1.50,
+  zoom: 1.20
+});

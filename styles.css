@@ -14,6 +14,7 @@
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    font-size: 16px;
 }
 
 body {
@@ -21,36 +22,7 @@ body {
     line-height: 1.8;
     background-color: var(--primary);
     color: var(--text);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 4rem;
-    background-color: var(--primary);
-    z-index: 1;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text);
-    text-decoration: none;
-}
-
-.hire-button {
-    padding: 0.5rem 1.5rem;
-    background-color: var(--secondary);
-    color: var(--text);
-    text-decoration: none;
-    border-radius: 25px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-.hire-button:hover {
-    background-color: var(--accent);
+    overflow-x: hidden;
 }
 
 section {
@@ -67,7 +39,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4rem;
+    padding: 2rem;
     min-height: 100vh;
     gap: 6rem;
 }
@@ -77,6 +49,7 @@ section {
     max-width: 50%;
     text-align: left;
     padding-top: 4rem;
+    z-index: 1;
 }
 
 .greeting {
@@ -110,6 +83,7 @@ section {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    z-index: 1;
 }
 
 .avatar img {
@@ -177,6 +151,7 @@ section {
     text-align: center;
     color: var(--text);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
 }
 
 .contact h2 {
@@ -192,6 +167,8 @@ section {
     gap: 2rem;
     flex-wrap: wrap;
     margin-top: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .contact-item {
@@ -242,53 +219,49 @@ section {
     100% { opacity: 1; }
 }
 
-@media (max-width: 768px) {
-    nav {
-        padding: 1.5rem;
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 14px;
     }
+}
 
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 12px;
+    }
     .introduction {
-        flex-direction: column-reverse;
-        padding: 2rem;
-        text-align: center;
+        flex-direction: column;
         gap: 3rem;
     }
-
     .intro-content, .avatar {
         max-width: 100%;
     }
+}
 
-    .intro-content {
-        text-align: center;
-        padding-top: 2rem;
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 10px;
     }
-
-    .avatar {
-        justify-content: center;
-    }
-
-    .name {
-        font-size: 3rem;
-    }
-
     .projects {
         flex-direction: column;
         height: auto;
-        min-height: 100vh;
     }
-
     .project {
-        height: 25vh;
+        height: 50vh;
     }
-
     .contact-info {
         flex-direction: column;
         align-items: center;
     }
-
     .contact-item {
         width: 100%;
         max-width: 300px;
         margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 8px;
     }
 }
